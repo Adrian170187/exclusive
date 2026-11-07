@@ -25,6 +25,7 @@ import {
 } from "@/data/catalog";
 import SuitCard from "@/components/SuitCard";
 import SuitModal from "@/components/SuitModal";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function HomePage() {
   const [selectedSuit, setSelectedSuit] = useState<SuitItem | null>(null);
@@ -57,6 +58,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Hero Copy */}
             <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+              <BrandLogo variant="hero" className="-ml-2 mb-1" />
+
               <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-sm bg-gold-400/10 border border-gold-400/40 text-gold-300 text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em]">
                 <Sparkles className="w-3.5 h-3.5 text-gold-400 shrink-0" />
                 <span>Alta Sastrería & Alquiler en Mendoza</span>

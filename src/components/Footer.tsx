@@ -9,6 +9,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { BUSINESS_INFO, buildWhatsAppLink } from "@/data/catalog";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function Footer() {
   const whatsappUrl = buildWhatsAppLink(
@@ -19,23 +20,11 @@ export default function Footer() {
     <footer className="bg-obsidian-900 border-t border-gold-400/20 text-zinc-400 pb-20 sm:pb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-          {/* Col 1: Brand */}
+          {/* Col 1: Brand with Official Framed Logo */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-sm border border-gold-400/60 bg-gold-400/10 flex items-center justify-center shrink-0">
-                <span className="font-serif text-xl font-bold text-gold-400">
-                  E
-                </span>
-              </div>
-              <div>
-                <p className="font-serif text-xl sm:text-2xl tracking-[0.18em] text-white font-semibold">
-                  EXCLUSIVE
-                </p>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-gold-400">
-                  Alquiler de Trajes · Mendoza
-                </p>
-              </div>
-            </div>
+            <Link href="/" className="inline-block">
+              <BrandLogo variant="hero" className="w-52 sm:w-56" />
+            </Link>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
               Especialistas en alquiler de trajes, ambos Slim Fit, esmóquines,
               frac, jaqué y accesorios de etiqueta para casamientos, egresados y

@@ -13,6 +13,7 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import { BUSINESS_INFO, buildWhatsAppLink } from "@/data/catalog";
+import BrandLogo from "@/components/BrandLogo";
 
 const NAV_LINKS = [
   { href: "/", label: "Inicio" },
@@ -76,25 +77,13 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
-        {/* Brand Logo */}
+        {/* Official Brand Logo */}
         <Link
           href="/"
           onClick={() => setMobileOpen(false)}
-          className="group flex items-center gap-2.5 sm:gap-3 min-w-0"
+          className="group min-w-0"
         >
-          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-sm border border-gold-400/60 bg-gradient-to-br from-gold-400/20 to-transparent flex items-center justify-center shadow-inner group-hover:border-gold-400 transition-colors shrink-0">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-wider text-gold-400">
-              E
-            </span>
-          </div>
-          <div className="flex flex-col min-w-0">
-            <span className="font-serif text-xl sm:text-3xl tracking-[0.14em] sm:tracking-[0.22em] text-white font-semibold leading-none truncate">
-              EXCLUSIVE
-            </span>
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.14em] sm:tracking-[0.26em] text-gold-400 mt-1 truncate">
-              Alquiler de Trajes · Mendoza
-            </span>
-          </div>
+          <BrandLogo variant="navbar" />
         </Link>
 
         {/* Desktop Links */}
