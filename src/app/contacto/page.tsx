@@ -44,18 +44,18 @@ export default function ContactoPage() {
   };
 
   return (
-    <div className="bg-obsidian-900 min-h-screen py-14">
+    <div className="bg-obsidian-900 min-h-screen py-8 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="border-b border-white/10 pb-10 mb-12">
-          <span className="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5" />
+        <div className="border-b border-white/10 pb-6 sm:pb-10 mb-8 sm:mb-12">
+          <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gold-400 font-semibold flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 shrink-0" />
             <span>Atención en Ciudad de Mendoza</span>
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl text-white font-semibold mt-2">
+          <h1 className="font-serif text-3xl sm:text-5xl text-white font-semibold mt-2">
             Contacto & Reserva de Prueba
           </h1>
-          <p className="text-sm sm:text-base text-zinc-400 max-w-3xl mt-3">
+          <p className="text-xs sm:text-base text-zinc-400 max-w-3xl mt-2.5 sm:mt-3 leading-relaxed">
             Visitá nuestro showroom en{" "}
             <strong className="text-zinc-200">
               Av. San Martín 1425 (Galería Bamac), Ciudad de Mendoza
@@ -65,10 +65,10 @@ export default function ContactoPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10">
           {/* Left: Interactive Booking Form */}
-          <div className="lg:col-span-7 bg-obsidian-800 border border-gold-400/30 rounded-sm p-6 sm:p-8">
-            <div className="mb-6">
+          <div className="lg:col-span-7 bg-obsidian-800 border border-gold-400/30 rounded-sm p-5 sm:p-8">
+            <div className="mb-5 sm:mb-6">
               <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold">
                 Agendá tu Prueba en el Local
               </h2>
@@ -90,7 +90,7 @@ export default function ContactoPage() {
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                     placeholder="Ej: Lucas Rodríguez"
-                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-gold-400"
+                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-base sm:text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-gold-400"
                   />
                 </div>
 
@@ -103,7 +103,7 @@ export default function ContactoPage() {
                     value={telefono}
                     onChange={(e) => setTelefono(e.target.value)}
                     placeholder="Ej: 261 555-1234"
-                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-gold-400"
+                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-base sm:text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-gold-400"
                   />
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function ContactoPage() {
                   <select
                     value={tipoEvento}
                     onChange={(e) => setTipoEvento(e.target.value)}
-                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400"
+                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-base sm:text-sm text-white focus:outline-none focus:border-gold-400"
                   >
                     <option value="Casamiento (Novio)">
                       Casamiento (Soy el Novio)
@@ -137,14 +137,14 @@ export default function ContactoPage() {
 
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-zinc-300 mb-1.5 flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-gold-400" />
+                    <Calendar className="w-3.5 h-3.5 text-gold-400 shrink-0" />
                     <span>Fecha Estimada del Evento</span>
                   </label>
                   <input
                     type="date"
                     value={fechaEvento}
                     onChange={(e) => setFechaEvento(e.target.value)}
-                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400"
+                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-base sm:text-sm text-white focus:outline-none focus:border-gold-400"
                   />
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function ContactoPage() {
                   <select
                     value={prendaInteres}
                     onChange={(e) => setPrendaInteres(e.target.value)}
-                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400"
+                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-base sm:text-sm text-white focus:outline-none focus:border-gold-400"
                   >
                     <option value="Traje / Ambo Slim Fit Completo">
                       Traje / Ambo Slim Fit Completo
@@ -187,7 +187,7 @@ export default function ContactoPage() {
                   <select
                     value={turnoPreferido}
                     onChange={(e) => setTurnoPreferido(e.target.value)}
-                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400"
+                    className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-base sm:text-sm text-white focus:outline-none focus:border-gold-400"
                   >
                     <option value="Por la mañana (09:30 a 13:30 hs)">
                       Por la mañana (09:30 a 13:30 hs)
@@ -211,20 +211,20 @@ export default function ContactoPage() {
                   value={comentarios}
                   onChange={(e) => setComentarios(e.target.value)}
                   placeholder="Ej: Mido 1.78m, peso 76kg, busco ambo azul noche con zapatos talle 42..."
-                  className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-gold-400"
+                  className="w-full bg-obsidian-900 border border-white/15 rounded-sm px-3.5 py-2.5 text-base sm:text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-gold-400"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 px-6 rounded-sm bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-obsidian-900 font-bold text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2 shadow-xl shadow-gold-400/15 transition-all"
+                className="w-full py-4 px-4 sm:px-6 rounded-sm bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-obsidian-900 font-bold text-xs uppercase tracking-wider sm:tracking-[0.16em] flex items-center justify-center gap-2 shadow-xl shadow-gold-400/15 transition-all text-center"
               >
-                <Send className="w-4 h-4" />
-                <span>Enviar Solicitud Directo al WhatsApp del Local</span>
+                <Send className="w-4 h-4 shrink-0" />
+                <span>Enviar Solicitud al WhatsApp del Local</span>
               </button>
 
               <p className="text-[11px] text-zinc-400 text-center flex items-center justify-center gap-1.5 pt-1">
-                <CheckCircle2 className="w-3.5 h-3.5 text-gold-400" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-gold-400 shrink-0" />
                 <span>
                   Atención directa con nuestros asesores en Ciudad de Mendoza
                 </span>
@@ -234,7 +234,7 @@ export default function ContactoPage() {
 
           {/* Right: Store Info & Map */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-obsidian-800 border border-white/10 rounded-sm p-6 sm:p-7 space-y-5">
+            <div className="bg-obsidian-800 border border-white/10 rounded-sm p-5 sm:p-7 space-y-5">
               <h3 className="font-serif text-2xl text-white font-semibold">
                 Datos del Showroom
               </h3>
@@ -258,7 +258,7 @@ export default function ContactoPage() {
                     className="inline-flex items-center gap-1 text-xs text-gold-300 hover:underline mt-1.5"
                   >
                     <span>Cómo llegar en Google Maps</span>
-                    <ExternalLink className="w-3 h-3" />
+                    <ExternalLink className="w-3 h-3 shrink-0" />
                   </a>
                 </div>
               </div>
@@ -314,14 +314,14 @@ export default function ContactoPage() {
                     className="text-sm text-white hover:text-gold-400 font-medium mt-0.5 inline-flex items-center gap-1"
                   >
                     <span>{BUSINESS_INFO.instagramHandle}</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
+                    <ExternalLink className="w-3.5 h-3.5 shrink-0" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Embedded Google Map of Av. San Martín 1425, Mendoza */}
-            <div className="rounded-sm overflow-hidden border border-white/15 bg-obsidian-800 h-72">
+            <div className="rounded-sm overflow-hidden border border-white/15 bg-obsidian-800 h-64 sm:h-72">
               <iframe
                 title="Ubicación Exclusive Alquiler de Trajes - Av. San Martín 1425, Mendoza"
                 src="https://www.google.com/maps?q=Av.+San+Martin+1425,+Mendoza,+Argentina&output=embed"

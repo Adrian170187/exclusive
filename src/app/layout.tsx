@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -16,6 +16,12 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-montserrat",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a0a0c",
+};
 
 export const metadata: Metadata = {
   title: "EXCLUSIVE | Alquiler de Trajes, Smoking y Etiqueta en Mendoza",
@@ -41,9 +47,9 @@ export default function RootLayout({
       lang="es-AR"
       className={`${cormorant.variable} ${montserrat.variable}`}
     >
-      <body className="font-sans bg-obsidian-900 text-zinc-100 antialiased selection:bg-gold-400 selection:text-obsidian-900 min-h-screen flex flex-col">
+      <body className="font-sans bg-obsidian-900 text-zinc-100 antialiased selection:bg-gold-400 selection:text-obsidian-900 min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 w-full overflow-x-hidden">{children}</main>
         <Footer />
         <WhatsAppWidget />
       </body>

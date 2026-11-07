@@ -77,18 +77,18 @@ export default function ComoFuncionaPage() {
   );
 
   return (
-    <div className="bg-obsidian-900 min-h-screen py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+    <div className="bg-obsidian-900 min-h-screen py-8 sm:py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-20">
         {/* Header */}
-        <div className="border-b border-white/10 pb-10">
-          <span className="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5" />
+        <div className="border-b border-white/10 pb-6 sm:pb-10">
+          <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gold-400 font-semibold flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 shrink-0" />
             <span>Experiencia Simple & Sin Complicaciones</span>
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl text-white font-semibold mt-2">
+          <h1 className="font-serif text-3xl sm:text-5xl text-white font-semibold mt-2">
             ¿Cómo Funciona el Alquiler en Exclusive?
           </h1>
-          <p className="text-sm sm:text-base text-zinc-400 max-w-3xl mt-3">
+          <p className="text-xs sm:text-base text-zinc-400 max-w-3xl mt-2.5 sm:mt-3 leading-relaxed">
             Nos ocupamos de cada detalle —desde la elección del corte y los
             ajustes de sastrería hasta el planchado a vapor y la tintorería
             final— para que tu única preocupación sea disfrutar de tu evento.
@@ -96,28 +96,28 @@ export default function ComoFuncionaPage() {
         </div>
 
         {/* 4 STEPS TIMELINE */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
           {RENTAL_STEPS.map((st) => (
             <div
               key={st.step}
-              className="p-8 bg-obsidian-800 border border-white/10 hover:border-gold-400/40 rounded-sm transition-all flex flex-col justify-between"
+              className="p-5 sm:p-8 bg-obsidian-800 border border-white/10 hover:border-gold-400/40 rounded-sm transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-serif text-5xl font-bold text-gold-400">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                  <span className="font-serif text-3xl sm:text-5xl font-bold text-gold-400">
                     Paso {st.step}
                   </span>
-                  <span className="px-3 py-1 rounded-sm bg-gold-400/15 border border-gold-400/40 text-gold-300 text-xs uppercase tracking-wider font-semibold">
+                  <span className="px-2.5 py-1 rounded-sm bg-gold-400/15 border border-gold-400/40 text-gold-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold">
                     {st.highlight}
                   </span>
                 </div>
                 <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold">
                   {st.title}
                 </h2>
-                <p className="text-xs uppercase tracking-[0.16em] text-gold-400 mt-1">
+                <p className="text-xs uppercase tracking-[0.14em] text-gold-400 mt-1">
                   {st.subtitle}
                 </p>
-                <p className="text-sm text-zinc-300 mt-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-300 mt-3 sm:mt-4 leading-relaxed">
                   {st.description}
                 </p>
               </div>
@@ -126,23 +126,23 @@ export default function ComoFuncionaPage() {
         </section>
 
         {/* INTERACTIVE DRESS CODE ADVISOR */}
-        <section className="bg-obsidian-800 border border-gold-400/30 rounded-sm p-6 sm:p-10">
-          <div className="max-w-3xl mb-8">
-            <span className="text-xs uppercase tracking-[0.22em] text-gold-400 font-semibold flex items-center gap-1.5">
-              <Shirt className="w-4 h-4" />
+        <section className="bg-obsidian-800 border border-gold-400/30 rounded-sm p-5 sm:p-10">
+          <div className="max-w-3xl mb-6 sm:mb-8">
+            <span className="text-xs uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-400 font-semibold flex items-center gap-1.5">
+              <Shirt className="w-4 h-4 shrink-0" />
               <span>Asesor Sartorial Interactivo</span>
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white font-semibold mt-1">
+            <h2 className="font-serif text-2xl sm:text-4xl text-white font-semibold mt-1">
               ¿Qué Necesitás Alquilar Según tu Rol?
             </h2>
-            <p className="text-sm text-zinc-400 mt-2">
+            <p className="text-xs sm:text-sm text-zinc-400 mt-2">
               Seleccioná tu perfil para ver la recomendación de nuestros sastres
               y las piezas incluidas en el pack.
             </p>
           </div>
 
           {/* Role Selector Tabs */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 mb-6 sm:mb-8">
             {DRESS_CODE_ADVISOR.map((item) => {
               const isSelected = activeRole.id === item.id;
               return (
@@ -150,7 +150,7 @@ export default function ComoFuncionaPage() {
                   key={item.id}
                   type="button"
                   onClick={() => setActiveRole(item)}
-                  className={`py-3.5 px-4 rounded-sm border text-xs uppercase tracking-[0.15em] font-semibold transition-all ${
+                  className={`py-3 px-2.5 sm:px-4 rounded-sm border text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-[0.14em] font-semibold transition-all text-center ${
                     isSelected
                       ? "bg-gold-400 text-obsidian-900 border-gold-400 shadow-lg"
                       : "bg-obsidian-900 text-zinc-300 border-white/10 hover:border-gold-400/50"
@@ -163,39 +163,39 @@ export default function ComoFuncionaPage() {
           </div>
 
           {/* Active Recommendation Card */}
-          <div className="bg-obsidian-900 border border-white/10 rounded-sm p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="bg-obsidian-900 border border-white/10 rounded-sm p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
-              <span className="text-xs uppercase tracking-[0.18em] text-gold-400 font-semibold">
+              <span className="text-xs uppercase tracking-[0.15em] text-gold-400 font-semibold block">
                 Etiqueta Sugerida para {activeRole.role}
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-white font-semibold">
+              <h3 className="font-serif text-xl sm:text-3xl text-white font-semibold">
                 {activeRole.recommended}
               </h3>
-              <p className="text-sm text-zinc-300 leading-relaxed border-l-2 border-gold-400 pl-4">
+              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed border-l-2 border-gold-400 pl-3.5 sm:pl-4">
                 {activeRole.tip}
               </p>
-              <div className="pt-2 flex flex-wrap gap-3">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <a
                   href={advisorWhatsApp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-sm bg-gold-400 hover:bg-gold-300 text-obsidian-900 font-bold text-xs uppercase tracking-[0.16em] transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-sm bg-gold-400 hover:bg-gold-300 text-obsidian-900 font-bold text-xs uppercase tracking-[0.14em] transition-all text-center"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4 shrink-0" />
                   <span>Cotizar este Pack por WhatsApp</span>
                 </a>
                 <Link
                   href="/catalogo"
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-sm border border-white/15 hover:border-gold-400 text-zinc-200 text-xs uppercase tracking-[0.15em] transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm border border-white/15 hover:border-gold-400 text-zinc-200 text-xs uppercase tracking-[0.14em] transition-all text-center"
                 >
                   <span>Ver Modelos en Catálogo</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </Link>
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-obsidian-800 p-6 rounded-sm border border-white/10">
-              <h4 className="text-xs uppercase tracking-[0.16em] text-gold-400 font-semibold mb-3">
+            <div className="lg:col-span-5 bg-obsidian-800 p-5 sm:p-6 rounded-sm border border-white/10">
+              <h4 className="text-xs uppercase tracking-[0.14em] text-gold-400 font-semibold mb-3">
                 Piezas disponibles para tu pack:
               </h4>
               <ul className="space-y-2.5">
@@ -214,13 +214,13 @@ export default function ComoFuncionaPage() {
         </section>
 
         {/* GARANTIA SARTORIAL & TALLES */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="p-8 bg-obsidian-800 border border-white/10 rounded-sm space-y-4">
-            <Scissors className="w-8 h-8 text-gold-400" />
-            <h3 className="font-serif text-2xl text-white font-semibold">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8">
+          <div className="p-6 sm:p-8 bg-obsidian-800 border border-white/10 rounded-sm space-y-3 sm:space-y-4">
+            <Scissors className="w-7 h-7 sm:w-8 sm:h-8 text-gold-400" />
+            <h3 className="font-serif text-xl sm:text-2xl text-white font-semibold">
               Taller de Ajustes Propio en el Local
             </h3>
-            <p className="text-sm text-zinc-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
               Sabemos que cada cuerpo es único. Por eso, al momento de tu prueba
               en{" "}
               <strong className="text-white">
@@ -231,12 +231,12 @@ export default function ComoFuncionaPage() {
             </p>
           </div>
 
-          <div className="p-8 bg-obsidian-800 border border-white/10 rounded-sm space-y-4">
-            <ShieldCheck className="w-8 h-8 text-gold-400" />
-            <h3 className="font-serif text-2xl text-white font-semibold">
+          <div className="p-6 sm:p-8 bg-obsidian-800 border border-white/10 rounded-sm space-y-3 sm:space-y-4">
+            <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 text-gold-400" />
+            <h3 className="font-serif text-xl sm:text-2xl text-white font-semibold">
               Higiene Ozonizada & Planchado Industrial
             </h3>
-            <p className="text-sm text-zinc-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
               Cada traje, camisa y par de zapatos pasa por un riguroso proceso
               de tintorería ecológica, desinfección y planchado a vapor vertical
               antes de entregarse en su funda porta-traje exclusiva.
@@ -246,11 +246,11 @@ export default function ComoFuncionaPage() {
 
         {/* FAQ ACCORDION */}
         <section className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <span className="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold">
+          <div className="text-center mb-8 sm:mb-10">
+            <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gold-400 font-semibold">
               Dudas Frecuentes
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white font-semibold mt-2">
+            <h2 className="font-serif text-2xl sm:text-4xl text-white font-semibold mt-2">
               Preguntas Frecuentes sobre el Alquiler
             </h2>
           </div>
@@ -266,9 +266,9 @@ export default function ComoFuncionaPage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition-colors"
+                    className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-3 hover:bg-white/5 transition-colors"
                   >
-                    <span className="font-serif text-lg sm:text-xl text-white font-medium">
+                    <span className="font-serif text-base sm:text-xl text-white font-medium leading-snug">
                       {faq.question}
                     </span>
                     <ChevronDown
@@ -278,7 +278,7 @@ export default function ComoFuncionaPage() {
                     />
                   </button>
                   {isOpen && (
-                    <div className="px-6 pb-5 pt-1 text-sm text-zinc-300 leading-relaxed border-t border-white/5">
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-2 text-xs sm:text-sm text-zinc-300 leading-relaxed border-t border-white/5">
                       {faq.answer}
                     </div>
                   )}

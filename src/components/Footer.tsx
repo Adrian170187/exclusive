@@ -16,27 +16,27 @@ export default function Footer() {
   );
 
   return (
-    <footer className="bg-obsidian-900 border-t border-gold-400/20 text-zinc-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-obsidian-900 border-t border-gold-400/20 text-zinc-400 pb-20 sm:pb-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Col 1: Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-sm border border-gold-400/60 bg-gold-400/10 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-sm border border-gold-400/60 bg-gold-400/10 flex items-center justify-center shrink-0">
                 <span className="font-serif text-xl font-bold text-gold-400">
                   E
                 </span>
               </div>
               <div>
-                <p className="font-serif text-2xl tracking-[0.2em] text-white font-semibold">
+                <p className="font-serif text-xl sm:text-2xl tracking-[0.18em] text-white font-semibold">
                   EXCLUSIVE
                 </p>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-gold-400">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-gold-400">
                   Alquiler de Trajes · Mendoza
                 </p>
               </div>
             </div>
-            <p className="text-sm text-zinc-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
               Especialistas en alquiler de trajes, ambos Slim Fit, esmóquines,
               frac, jaqué y accesorios de etiqueta para casamientos, egresados y
               galas en la Ciudad de Mendoza.
@@ -49,10 +49,10 @@ export default function Footer() {
 
           {/* Col 2: Navegación */}
           <div>
-            <h3 className="font-serif text-lg text-white tracking-wider uppercase mb-4">
+            <h3 className="font-serif text-lg text-white tracking-wider uppercase mb-3 sm:mb-4">
               Explorar
             </h3>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
                 <Link
                   href="/"
@@ -98,10 +98,10 @@ export default function Footer() {
 
           {/* Col 3: Líneas Destacadas */}
           <div>
-            <h3 className="font-serif text-lg text-white tracking-wider uppercase mb-4">
+            <h3 className="font-serif text-lg text-white tracking-wider uppercase mb-3 sm:mb-4">
               Colecciones
             </h3>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
                 <Link
                   href="/catalogo?categoria=ambos"
@@ -139,10 +139,10 @@ export default function Footer() {
 
           {/* Col 4: Showroom Mendoza */}
           <div className="space-y-3">
-            <h3 className="font-serif text-lg text-white tracking-wider uppercase mb-4">
+            <h3 className="font-serif text-lg text-white tracking-wider uppercase mb-3 sm:mb-4">
               Showroom Mendoza
             </h3>
-            <div className="flex items-start gap-2.5 text-sm">
+            <div className="flex items-start gap-2.5 text-xs sm:text-sm">
               <MapPin className="w-4 h-4 text-gold-400 shrink-0 mt-1" />
               <div>
                 <p className="text-zinc-200 font-medium">
@@ -151,7 +151,7 @@ export default function Footer() {
                 <p className="text-xs text-zinc-500">{BUSINESS_INFO.city}</p>
               </div>
             </div>
-            <div className="flex items-start gap-2.5 text-sm">
+            <div className="flex items-start gap-2.5 text-xs sm:text-sm">
               <Phone className="w-4 h-4 text-gold-400 shrink-0 mt-1" />
               <a
                 href={whatsappUrl}
@@ -162,7 +162,7 @@ export default function Footer() {
                 {BUSINESS_INFO.phoneDisplay} (WhatsApp)
               </a>
             </div>
-            <div className="flex items-start gap-2.5 text-sm">
+            <div className="flex items-start gap-2.5 text-xs sm:text-sm">
               <Clock className="w-4 h-4 text-gold-400 shrink-0 mt-1" />
               <div className="text-xs space-y-1">
                 {BUSINESS_INFO.hours.map((h) => (
@@ -189,14 +189,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-zinc-500">
           <p>
             © {new Date().getFullYear()} {BUSINESS_INFO.fullName}. Todos los
             derechos reservados.
           </p>
           <p>
-            Av. San Martín 1425, Ciudad de Mendoza · Atención personalizada en
-            salón y vía WhatsApp.
+            Av. San Martín 1425, Ciudad de Mendoza · Atención en salón y vía
+            WhatsApp.
           </p>
         </div>
       </div>
