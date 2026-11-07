@@ -1,0 +1,52 @@
+import type { Metadata } from "next";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-cormorant",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
+});
+
+export const metadata: Metadata = {
+  title: "EXCLUSIVE | Alquiler de Trajes, Smoking y Etiqueta en Mendoza",
+  description:
+    "Alquiler de trajes Slim Fit, ambos, esmóquines (smoking), frac, jaqué y accesorios para novios, egresados, padrinos e invitados en Ciudad de Mendoza. Av. San Martín 1425 (Galería Bamac).",
+  keywords: [
+    "alquiler de trajes mendoza",
+    "trajes exclusive mendoza",
+    "alquiler de smoking mendoza",
+    "trajes para novios mendoza",
+    "trajes para egresados mendoza",
+    "alquiler de frac y jaque mendoza",
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="es-AR"
+      className={`${cormorant.variable} ${montserrat.variable}`}
+    >
+      <body className="font-sans bg-obsidian-900 text-zinc-100 antialiased selection:bg-gold-400 selection:text-obsidian-900 min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <WhatsAppWidget />
+      </body>
+    </html>
+  );
+}
