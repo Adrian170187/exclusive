@@ -32,18 +32,18 @@ export default function Navbar() {
   );
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-obsidian-900/95 border-b border-gold-400/20">
+    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/95 border-b border-zinc-200 shadow-sm">
       {/* Top Info Bar */}
-      <div className="bg-obsidian-800 border-b border-white/5 text-[11px] sm:text-xs text-zinc-300">
+      <div className="bg-zinc-950 text-[11px] sm:text-xs text-zinc-200">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-8 sm:h-9 flex items-center justify-between gap-2">
           <div className="flex items-center gap-3 min-w-0">
             <a
               href={BUSINESS_INFO.googleMapsQuery}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:text-gold-400 transition-colors truncate"
+              className="flex items-center gap-1.5 hover:text-white transition-colors truncate"
             >
-              <MapPin className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-white shrink-0" />
               <span className="truncate sm:hidden">
                 Av. San Martín 1425, Mendoza
               </span>
@@ -51,12 +51,12 @@ export default function Navbar() {
                 {BUSINESS_INFO.address}
               </span>
             </a>
-            <span className="hidden md:inline text-white/20">|</span>
+            <span className="hidden md:inline text-white/25">|</span>
             <a
               href={`tel:+${BUSINESS_INFO.whatsappNumber}`}
-              className="hidden md:flex items-center gap-1.5 hover:text-gold-400 transition-colors shrink-0"
+              className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors shrink-0"
             >
-              <Phone className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+              <Phone className="w-3.5 h-3.5 text-white shrink-0" />
               <span>{BUSINESS_INFO.phoneDisplay}</span>
             </a>
           </div>
@@ -66,7 +66,7 @@ export default function Navbar() {
               href={BUSINESS_INFO.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-gold-300 hover:text-gold-400 font-medium transition-colors"
+              className="flex items-center gap-1 text-white hover:text-zinc-300 font-medium transition-colors"
             >
               <Instagram className="w-3.5 h-3.5 shrink-0" />
               <span>{BUSINESS_INFO.instagramHandle}</span>
@@ -76,12 +76,12 @@ export default function Navbar() {
       </div>
 
       {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-2 bg-white">
         {/* Official Brand Logo */}
         <Link
           href="/"
           onClick={() => setMobileOpen(false)}
-          className="group min-w-0"
+          className="group min-w-0 flex items-center"
         >
           <BrandLogo variant="navbar" />
         </Link>
@@ -100,13 +100,13 @@ export default function Navbar() {
                 href={link.href}
                 className={`relative py-2 text-xs xl:text-sm uppercase tracking-[0.14em] transition-colors ${
                   isActive
-                    ? "text-gold-400 font-semibold"
-                    : "text-zinc-300 hover:text-white"
+                    ? "text-black font-bold"
+                    : "text-zinc-600 hover:text-black font-medium"
                 }`}
               >
                 {link.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-400 via-gold-300 to-transparent" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black" />
                 )}
               </Link>
             );
@@ -119,7 +119,7 @@ export default function Navbar() {
             href={reservaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-sm bg-gradient-to-r from-gold-400 to-gold-500 text-obsidian-900 font-semibold text-xs uppercase tracking-[0.14em] hover:from-gold-300 hover:to-gold-400 transition-all shadow-lg shadow-gold-400/10"
+            className="inline-flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-sm bg-zinc-950 text-white font-semibold text-xs uppercase tracking-[0.14em] hover:bg-zinc-800 transition-all shadow-sm"
           >
             <CalendarCheck className="w-4 h-4 shrink-0" />
             <span>Reservar Prueba</span>
@@ -130,7 +130,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2.5 rounded-sm border border-white/15 text-zinc-200 hover:text-gold-400 hover:border-gold-400/40 transition-colors shrink-0"
+          className="lg:hidden p-2.5 rounded-sm border border-zinc-300 text-zinc-900 hover:bg-zinc-100 transition-colors shrink-0"
           aria-label="Abrir menú de navegación"
           aria-expanded={mobileOpen}
         >
@@ -140,7 +140,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden bg-obsidian-800 border-b border-gold-400/30 px-4 pt-3 pb-6 space-y-2 shadow-2xl max-h-[calc(100vh-6rem)] overflow-y-auto">
+        <div className="lg:hidden bg-white border-b border-zinc-200 px-4 pt-3 pb-6 space-y-2 shadow-xl max-h-[calc(100vh-6rem)] overflow-y-auto">
           {NAV_LINKS.map((link) => {
             const isActive =
               link.href === "/"
@@ -153,21 +153,21 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={`block px-3.5 py-3 rounded-sm text-xs sm:text-sm uppercase tracking-[0.14em] ${
                   isActive
-                    ? "bg-gold-400/15 text-gold-400 border-l-2 border-gold-400 font-semibold"
-                    : "text-zinc-200 hover:bg-white/5"
+                    ? "bg-zinc-100 text-black border-l-2 border-black font-bold"
+                    : "text-zinc-700 hover:bg-zinc-50"
                 }`}
               >
                 {link.label}
               </Link>
             );
           })}
-          <div className="pt-3 mt-2 border-t border-white/10 flex flex-col gap-2.5">
+          <div className="pt-3 mt-2 border-t border-zinc-200 flex flex-col gap-2.5">
             <a
               href={reservaUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="w-full py-3.5 rounded-sm bg-gold-400 text-obsidian-900 font-bold text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2 shadow-md"
+              className="w-full py-3.5 rounded-sm bg-zinc-950 text-white font-bold text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2 shadow-md"
             >
               <Sparkles className="w-4 h-4 shrink-0" />
               <span>Reservar Prueba por WhatsApp</span>
@@ -177,9 +177,9 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="w-full py-3 rounded-sm border border-white/15 text-zinc-200 text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-sm border border-zinc-300 text-zinc-900 text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2 font-medium"
             >
-              <Instagram className="w-4 h-4 text-gold-400 shrink-0" />
+              <Instagram className="w-4 h-4 text-black shrink-0" />
               <span>Instagram {BUSINESS_INFO.instagramHandle}</span>
             </a>
           </div>

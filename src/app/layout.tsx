@@ -7,7 +7,7 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-cormorant",
 });
 
@@ -20,7 +20,7 @@ const montserrat = Montserrat({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0a0a0c",
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function RootLayout({
       lang="es-AR"
       className={`${cormorant.variable} ${montserrat.variable}`}
     >
-      <body className="font-sans bg-obsidian-900 text-zinc-100 antialiased selection:bg-gold-400 selection:text-obsidian-900 min-h-screen flex flex-col overflow-x-hidden">
+      <body className="font-sans bg-white text-zinc-900 antialiased selection:bg-zinc-900 selection:text-white min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
         <main className="flex-1 w-full overflow-x-hidden">{children}</main>
         <Footer />
