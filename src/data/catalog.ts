@@ -1,3 +1,5 @@
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export type CategoryId =
   | "todos"
   | "ambos"
@@ -61,12 +63,32 @@ export const BUSINESS_INFO = {
   ],
 };
 
-export const CATEGORIES: { id: CategoryId; label: string; countLabel: string }[] = [
+export const CATEGORIES: {
+  id: CategoryId;
+  label: string;
+  countLabel: string;
+}[] = [
   { id: "todos", label: "Toda la Colección", countLabel: "12 piezas" },
-  { id: "ambos", label: "Trajes & Ambos", countLabel: "Novios · Egresados · Invitados" },
-  { id: "esmoquin", label: "Smoking (Black Tie)", countLabel: "Solapa Razo & Gala" },
-  { id: "etiqueta", label: "Frac & Jaqué", countLabel: "Protocolo & Alta Ceremonia" },
-  { id: "accesorios", label: "Accesorios & Calzado", countLabel: "Camisas · Chalecos · Zapatos" },
+  {
+    id: "ambos",
+    label: "Trajes & Ambos",
+    countLabel: "Novios · Egresados · Invitados",
+  },
+  {
+    id: "esmoquin",
+    label: "Smoking (Black Tie)",
+    countLabel: "Solapa Razo & Gala",
+  },
+  {
+    id: "etiqueta",
+    label: "Frac & Jaqué",
+    countLabel: "Protocolo & Alta Ceremonia",
+  },
+  {
+    id: "accesorios",
+    label: "Accesorios & Calzado",
+    countLabel: "Camisas · Chalecos · Zapatos",
+  },
 ];
 
 export const OCCASIONS: { id: OccasionId; label: string }[] = [
@@ -94,10 +116,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     lapel: "Solapa Chal (Shawl Lapel) en satén",
     priceTier: "Línea Black Tie Exclusive",
     badge: "Más Elegido por Novios",
-    image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/smoking-azul-medianoche.jpg`,
     description:
       "Nuestro esmoquin insignia para novios y galas de etiqueta en Mendoza. Corte Slim Fit contemporáneo con solapa redonda de raso negro, botón forrado y pantalón con galón lateral de seda.",
     includes: [
@@ -125,10 +145,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     lapel: "Solapa en Punta (Peak Lapel)",
     priceTier: "Pack Completo 3 Piezas",
     badge: "Favorito Egresados & Bodas",
-    image:
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/ambo-milano-azul-noche.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/pack-camisa-chaleco-sastrero.jpg`,
     description:
       "Elegancia versátil que estiliza la figura tanto de día en bodegas mendocinas como de noche en salones. Incluye chaleco entallado de 5 botones y corbata o moño a elección.",
     includes: [
@@ -156,12 +174,10 @@ export const CATALOG_ITEMS: SuitItem[] = [
     lapel: "Levita clásica con faldón curvo",
     priceTier: "Alta Etiqueta Ceremonial",
     badge: "Etiqueta de Máximo Nivel",
-    image:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/jaque-ceremonia-windsor.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/pack-camisa-chaleco-sastrero.jpg`,
     description:
-      "El máximo exponente de distinción para novios y padrinos en bodas diurnas o de tarde en viñedos de Mendoza. Levita de corte impecable combinada con chaleco gris perla o beige champagne y pantalón milrayas.",
+      "El máximo exponente de distinción para novios y padrinos en bodas diurnas o de tarde en viñedos de Mendoza. Levita de corte impecable combinada con chaleco gris perla cruzado y pantalón milrayas.",
     includes: [
       "Levita de Jaqué corte inglés",
       "Chaleco cruzado o simple en tono contraste",
@@ -187,10 +203,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     lapel: "Solapa en Punta de raso negro",
     priceTier: "Edición Red Carpet",
     badge: "Tendencia Novios & Egresados",
-    image:
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/smoking-ivory-velvet.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`,
     description:
       "Diseñado para quienes buscan destacar con absoluta distinción. Saco marfil con solapa negra en contraste, acompañado de pantalón negro de etiqueta y moño de seda.",
     includes: [
@@ -217,10 +231,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     fabric: "Tropical mecánico premium de caída fluida",
     lapel: "Solapa Clásica (Notch Lapel)",
     priceTier: "Alquiler Clásico Completo",
-    image:
-      "https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/ambo-marengo-ejecutivo.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/pack-camisa-chaleco-sastrero.jpg`,
     description:
       "Un clásico infalible para padrinos de boda, invitados especiales, graduaciones y congresos empresariales en Mendoza. Corte Tailored Fit cómodo y elegante.",
     includes: [
@@ -246,10 +258,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     fabric: "Paño de lana virgen con solapa de seda mate",
     lapel: "Solapa en Punta con faldón de pingüino",
     priceTier: "Protocolo White Tie",
-    image:
-      "https://images.unsplash.com/photo-1555069519-127aadedf1ee?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/frac-gala-viena.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`,
     description:
       "Traje de máxima etiqueta masculina para galas protocolares, conciertos sinfónicos y casamientos de etiqueta rigurosa. Incluye chaleco y moño en piqué blanco.",
     includes: [
@@ -277,10 +287,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     lapel: "Solapa angosta con vivo satinado",
     priceTier: "Línea Egresados & Fiesta",
     badge: "Especial Egresados Mendoza",
-    image:
-      "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/ambo-bordeaux-egresados.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/set-corbatas-monos-gemelos.jpg`,
     description:
       "Inspirado en los tonos del Malbec mendocino, este ambo Slim Fit ofrece un calce moderno e impactante para cenas de egresados y novios que buscan un look audaz.",
     includes: [
@@ -307,10 +315,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     lapel: "Solapa Clásica pespunteada",
     priceTier: "Colección Sunset & Viñedos",
     badge: "Ideal Bodas en Bodegas",
-    image:
-      "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/ambo-arena-bodega.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/set-corbatas-monos-gemelos.jpg`,
     description:
       "Pensado especialmente para casamientos al aire libre en Luján de Cuyo, Maipú y Valle de Uco. Fresco, luminoso y con una caída sartorial impecable en fotografías de día.",
     includes: [
@@ -337,10 +343,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     fabric: "Lana fría con microbrillo nocturno",
     lapel: "Solapa en Punta en raso negro",
     priceTier: "Línea Black Tie Exclusive",
-    image:
-      "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/smoking-azul-medianoche.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`,
     description:
       "El favorito de las alfombras rojas internacionales: bajo luz artificial se percibe aún más intenso que el negro y resalta el contraste con las solapas de seda negra.",
     includes: [
@@ -366,10 +370,8 @@ export const CATALOG_ITEMS: SuitItem[] = [
     fabric: "Sarga sastrera y algodón egipcio",
     lapel: "Escote en V sastrero de 4 a 6 botones",
     priceTier: "Adicional o Alquiler Individual",
-    image:
-      "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/pack-camisa-chaleco-sastrero.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/ambo-milano-azul-noche.jpg`,
     description:
       "Elevá tu ambo con un chaleco sastrero en contraste o al tono y camisas impecables de puño simple o doble para gemelos, cuello italiano o diplomático (paloma).",
     includes: [
@@ -389,20 +391,18 @@ export const CATALOG_ITEMS: SuitItem[] = [
     categoryLabel: "Accesorios & Calzado",
     occasions: ["novios", "egresados", "padrinos", "invitados", "gala"],
     fit: "Classic Fit",
-    color: "Negro Charol, Cuero Negro y Suela Habano",
+    color: "Negro Charol y Cuero Negro Mate",
     colorHex: "#1c1917",
     fabric: "Cuero vacuno legítimo y charol italiano",
     lapel: "Horma estilizada acordonada",
     priceTier: "Complemento de Alquiler",
     badge: "Del Talle 38 al 46",
-    image:
-      "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/calzado-oxford-charol-cuero.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/set-corbatas-monos-gemelos.jpg`,
     description:
       "Completá tu conjunto sin preocuparte por comprar calzado para una sola noche. Zapatos Oxford en cuero mate para trajes y charol espejado para smoking y frac, higienizados y lustrados profesionalmente.",
     includes: [
-      "Par de zapatos de vestir en caja",
+      "Par de zapatos de vestir para hombre en caja",
       "Cinturón de cuero al tono (opcional)",
       "Higienización ozonizada garantizada",
     ],
@@ -413,7 +413,7 @@ export const CATALOG_ITEMS: SuitItem[] = [
     id: "set-corbatas-monos-gemelos",
     slug: "set-corbatas-monos-gemelos",
     name: "Set de Moños, Corbatas, Tiradores & Gemelos",
-    subtitle: "Más de 60 Tonos para Combinar con el Vestido o Evento",
+    subtitle: "Más de 60 Tonos para Combinar con el Evento",
     category: "accesorios",
     categoryLabel: "Accesorios & Calzado",
     occasions: ["novios", "egresados", "padrinos", "invitados", "gala"],
@@ -421,12 +421,10 @@ export const CATALOG_ITEMS: SuitItem[] = [
     color: "Carta de +60 Colores en Seda y Satén",
     colorHex: "#d4af37",
     fabric: "Seda natural, microfibra italiana y acero quirúrgico",
-    lapel: "Accesorios de Etiqueta",
+    lapel: "Accesorios de Etiqueta Masculina",
     priceTier: "Incluido en Packs o Individual",
-    image:
-      "https://images.unsplash.com/photo-1589756823695-278bc923f962?auto=format&fit=crop&w=1000&q=85",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
+    image: `${BASE_PATH}/catalogo/set-corbatas-monos-gemelos.jpg`,
+    secondaryImage: `${BASE_PATH}/catalogo/pack-camisa-chaleco-sastrero.jpg`,
     description:
       "El detalle define al caballero: contamos con una amplia paleta de corbatas slim y clásicas, corbatones para novios, moños armados o para anudar, pañuelos de bolsillo, fajas de smoking, tiradores y gemelos.",
     includes: [
@@ -496,7 +494,8 @@ export const FAQS = [
       "Para congelar el precio y reservar la prenda para tu fecha, se abona una seña (en efectivo, transferencia o Mercado Pago) y al retirar se cancela el saldo restante presentando DNI y una boleta de servicio o garantía simple.",
   },
   {
-    question: "¿Tienen talles especiales y trajes para grupos de egresados o cortejos?",
+    question:
+      "¿Tienen talles especiales y trajes para grupos de egresados o cortejos?",
     answer:
       "Sí, trabajamos una curva amplísima desde el talle 40/42 hasta talles especiales (60/62+), en cortes Slim Fit y Clásico. Además ofrecemos beneficios exclusivos por grupo para promociones de egresados y cortejos de boda (novio + padrinos + testigos).",
   },
@@ -507,54 +506,54 @@ export const GALLERY_ITEMS = [
     id: "gal-1",
     title: "Novios en Bodegas de Mendoza",
     category: "Novios & Ceremonia",
-    caption: "Ambo tres piezas azul noche y smoking clásico en casamientos de Luján de Cuyo y Maipú.",
-    image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
+    caption:
+      "Ambo tres piezas beige champagne y smoking clásico en casamientos de Luján de Cuyo y Maipú.",
+    image: `${BASE_PATH}/catalogo/ambo-arena-bodega.jpg`,
     span: "md:col-span-2 md:row-span-2",
   },
   {
     id: "gal-2",
     title: "Black Tie & Solapa de Seda",
     category: "Smoking",
-    caption: "Detalle de solapa chal en raso italiano, moño de satén y pañuelo de bolsillo.",
-    image:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=85",
+    caption:
+      "Detalle de solapa chal en raso italiano, moño de satén y pañuelo de bolsillo.",
+    image: `${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`,
     span: "md:col-span-1 md:row-span-1",
   },
   {
     id: "gal-3",
     title: "Noche de Egresados",
     category: "Egresados",
-    caption: "Cortes Slim Fit modernos en tonos azul noche, negro obsidiana y bordeaux.",
-    image:
-      "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=900&q=85",
+    caption:
+      "Cortes Slim Fit modernos en tonos bordeaux Malbec, azul noche y negro obsidiana.",
+    image: `${BASE_PATH}/catalogo/ambo-bordeaux-egresados.jpg`,
     span: "md:col-span-1 md:row-span-1",
   },
   {
     id: "gal-4",
     title: "Sastrería Tres Piezas",
     category: "Ambos & Chalecos",
-    caption: "Chalecos entallados que mantienen la elegancia incluso al quitarse el saco durante la fiesta.",
-    image:
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=900&q=85",
+    caption:
+      "Chalecos entallados que mantienen la elegancia incluso al quitarse el saco durante la fiesta.",
+    image: `${BASE_PATH}/catalogo/ambo-milano-azul-noche.jpg`,
     span: "md:col-span-1 md:row-span-2",
   },
   {
     id: "gal-5",
-    title: "Bodas al Aire Libre & Sunset",
-    category: "Colección Día",
-    caption: "Tonos beige champagne, gris perla y arena ideales para ceremonias de día.",
-    image:
-      "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=900&q=85",
+    title: "Smoking Blanco & Medianoche",
+    category: "Edición Red Carpet",
+    caption:
+      "Sacos smoking en blanco marfil y azul medianoche con solapa en punta de seda negra.",
+    image: `${BASE_PATH}/catalogo/smoking-ivory-velvet.jpg`,
     span: "md:col-span-1 md:row-span-1",
   },
   {
     id: "gal-6",
     title: "Calzado Oxford & Charol",
-    category: "Accesorios",
-    caption: "Zapatos de vestir lustrados a espejo y accesorios de etiqueta para un look integral.",
-    image:
-      "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=85",
+    category: "Accesorios Masculinos",
+    caption:
+      "Zapatos de vestir para hombre lustrados a espejo y accesorios de etiqueta para un look integral.",
+    image: `${BASE_PATH}/catalogo/calzado-oxford-charol-cuero.jpg`,
     span: "md:col-span-1 md:row-span-1",
   },
 ];

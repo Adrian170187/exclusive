@@ -27,6 +27,8 @@ import SuitCard from "@/components/SuitCard";
 import SuitModal from "@/components/SuitModal";
 import BrandLogo from "@/components/BrandLogo";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function HomePage() {
   const [selectedSuit, setSelectedSuit] = useState<SuitItem | null>(null);
 
@@ -46,8 +48,8 @@ export default function HomePage() {
         {/* Background Image & Luxury Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=2000&q=85"
-            alt="Exclusive Alquiler de Trajes en Mendoza"
+            src={`${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`}
+            alt="Exclusive Alquiler de Trajes para Hombres en Mendoza"
             className="w-full h-full object-cover object-center scale-105 opacity-35"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-obsidian-900 via-obsidian-900/90 to-obsidian-900/65" />
@@ -62,7 +64,7 @@ export default function HomePage() {
 
               <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-sm bg-gold-400/10 border border-gold-400/40 text-gold-300 text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em]">
                 <Sparkles className="w-3.5 h-3.5 text-gold-400 shrink-0" />
-                <span>Alta Sastrería & Alquiler en Mendoza</span>
+                <span>Alta Sastrería & Alquiler Masculino en Mendoza</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-white font-semibold leading-[1.12] sm:leading-[1.08] tracking-tight">
@@ -77,7 +79,7 @@ export default function HomePage() {
                 Especialistas en alquiler de{" "}
                 <strong className="text-white font-medium">
                   trajes Slim Fit, ambos tres piezas, esmóquines (smoking), frac
-                  y jaqué de ceremonia
+                  y jaqué de ceremonia para hombres
                 </strong>
                 . Vestimos a novios, egresados, padrinos e invitados con ajustes
                 sartoriales a medida y accesorios completos incluidos.
@@ -147,8 +149,8 @@ export default function HomePage() {
                 <div className="hidden sm:block absolute -inset-3 border border-gold-400/30 rounded-sm translate-x-3 translate-y-3 pointer-events-none" />
                 <div className="relative aspect-[16/11] sm:aspect-[4/5] rounded-sm overflow-hidden border border-gold-400/40 shadow-2xl bg-obsidian-800">
                   <img
-                    src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=85"
-                    alt="Smoking de etiqueta Exclusive Mendoza"
+                    src={`${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`}
+                    alt="Smoking de etiqueta masculino Exclusive Mendoza"
                     className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/20 to-transparent" />
@@ -192,7 +194,7 @@ export default function HomePage() {
       <section className="py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gold-400 font-semibold">
-            Nuestras Líneas de Alquiler
+            Nuestras Líneas de Alquiler Masculino
           </span>
           <h2 className="font-serif text-2xl sm:text-5xl text-white font-semibold mt-2">
             Indumentaria de Etiqueta para Cada Ocasión
@@ -208,8 +210,8 @@ export default function HomePage() {
           <div className="group relative rounded-sm overflow-hidden bg-obsidian-800 border border-white/10 hover:border-gold-400/60 transition-all flex flex-col justify-between">
             <div className="relative h-60 sm:h-72 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=900&q=85"
-                alt="Alquiler de Trajes y Ambos en Mendoza"
+                src={`${BASE_PATH}/catalogo/ambo-milano-azul-noche.jpg`}
+                alt="Alquiler de Trajes y Ambos para Hombres en Mendoza"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian-800 via-obsidian-900/30 to-transparent" />
@@ -244,8 +246,8 @@ export default function HomePage() {
           <div className="group relative rounded-sm overflow-hidden bg-obsidian-800 border border-white/10 hover:border-gold-400/60 transition-all flex flex-col justify-between">
             <div className="relative h-60 sm:h-72 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85"
-                alt="Alquiler de Smoking, Frac y Jaqué en Mendoza"
+                src={`${BASE_PATH}/catalogo/smoking-azul-medianoche.jpg`}
+                alt="Alquiler de Smoking, Frac y Jaqué para Hombres en Mendoza"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian-800 via-obsidian-900/30 to-transparent" />
@@ -281,8 +283,8 @@ export default function HomePage() {
           <div className="group relative rounded-sm overflow-hidden bg-obsidian-800 border border-white/10 hover:border-gold-400/60 transition-all flex flex-col justify-between">
             <div className="relative h-60 sm:h-72 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=85"
-                alt="Accesorios de etiqueta y calzado formal en Mendoza"
+                src={`${BASE_PATH}/catalogo/calzado-oxford-charol-cuero.jpg`}
+                alt="Accesorios de etiqueta y calzado formal masculino en Mendoza"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian-800 via-obsidian-900/30 to-transparent" />
