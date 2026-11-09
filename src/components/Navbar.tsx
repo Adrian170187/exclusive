@@ -32,9 +32,9 @@ export default function Navbar() {
   );
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/95 border-b border-zinc-200 shadow-sm">
-      {/* Top Info Bar */}
-      <div className="bg-zinc-950 text-[11px] sm:text-xs text-zinc-200">
+    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/95 border-b border-hyatt-border shadow-sm">
+      {/* Top Info Bar - Park Hyatt Charcoal & Warm Taupe */}
+      <div className="bg-hyatt-charcoal text-[11px] sm:text-xs text-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-8 sm:h-9 flex items-center justify-between gap-2">
           <div className="flex items-center gap-3 min-w-0">
             <a
@@ -43,7 +43,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-white transition-colors truncate"
             >
-              <MapPin className="w-3.5 h-3.5 text-white shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
               <span className="truncate sm:hidden">
                 Av. San Martín 1425, Mendoza
               </span>
@@ -51,12 +51,12 @@ export default function Navbar() {
                 {BUSINESS_INFO.address}
               </span>
             </a>
-            <span className="hidden md:inline text-white/25">|</span>
+            <span className="hidden md:inline text-white/20">|</span>
             <a
               href={`tel:+${BUSINESS_INFO.whatsappNumber}`}
               className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors shrink-0"
             >
-              <Phone className="w-3.5 h-3.5 text-white shrink-0" />
+              <Phone className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
               <span>{BUSINESS_INFO.phoneDisplay}</span>
             </a>
           </div>
@@ -66,16 +66,16 @@ export default function Navbar() {
               href={BUSINESS_INFO.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-white hover:text-zinc-300 font-medium transition-colors"
+              className="flex items-center gap-1 text-[#E8E2D5] hover:text-white font-medium transition-colors"
             >
-              <Instagram className="w-3.5 h-3.5 shrink-0" />
+              <Instagram className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
               <span>{BUSINESS_INFO.instagramHandle}</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {/* Main Navigation on Pure White to honor Original Logo */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-2 bg-white">
         {/* Official Brand Logo */}
         <Link
@@ -100,26 +100,26 @@ export default function Navbar() {
                 href={link.href}
                 className={`relative py-2 text-xs xl:text-sm uppercase tracking-[0.14em] transition-colors ${
                   isActive
-                    ? "text-black font-bold"
-                    : "text-zinc-600 hover:text-black font-medium"
+                    ? "text-hyatt-burgundy font-bold"
+                    : "text-hyatt-muted hover:text-hyatt-charcoal font-medium"
                 }`}
               >
                 {link.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-hyatt-burgundy" />
                 )}
               </Link>
             );
           })}
         </nav>
 
-        {/* CTA Button (Tablet & Desktop) */}
+        {/* CTA Button (Park Hyatt Burgundy) */}
         <div className="hidden sm:flex items-center gap-3 shrink-0">
           <a
             href={reservaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-sm bg-zinc-950 text-white font-semibold text-xs uppercase tracking-[0.14em] hover:bg-zinc-800 transition-all shadow-sm"
+            className="inline-flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-sm bg-hyatt-burgundy text-white font-semibold text-xs uppercase tracking-[0.14em] hover:bg-hyatt-wine transition-all shadow-sm"
           >
             <CalendarCheck className="w-4 h-4 shrink-0" />
             <span>Reservar Prueba</span>
@@ -130,7 +130,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2.5 rounded-sm border border-zinc-300 text-zinc-900 hover:bg-zinc-100 transition-colors shrink-0"
+          className="lg:hidden p-2.5 rounded-sm border border-hyatt-border text-hyatt-charcoal hover:bg-hyatt-cream transition-colors shrink-0"
           aria-label="Abrir menú de navegación"
           aria-expanded={mobileOpen}
         >
@@ -140,7 +140,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-b border-zinc-200 px-4 pt-3 pb-6 space-y-2 shadow-xl max-h-[calc(100vh-6rem)] overflow-y-auto">
+        <div className="lg:hidden bg-hyatt-ivory border-b border-hyatt-border px-4 pt-3 pb-6 space-y-2 shadow-xl max-h-[calc(100vh-6rem)] overflow-y-auto">
           {NAV_LINKS.map((link) => {
             const isActive =
               link.href === "/"
@@ -153,21 +153,21 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={`block px-3.5 py-3 rounded-sm text-xs sm:text-sm uppercase tracking-[0.14em] ${
                   isActive
-                    ? "bg-zinc-100 text-black border-l-2 border-black font-bold"
-                    : "text-zinc-700 hover:bg-zinc-50"
+                    ? "bg-hyatt-cream text-hyatt-burgundy border-l-2 border-hyatt-burgundy font-bold"
+                    : "text-hyatt-charcoal hover:bg-hyatt-cream/60"
                 }`}
               >
                 {link.label}
               </Link>
             );
           })}
-          <div className="pt-3 mt-2 border-t border-zinc-200 flex flex-col gap-2.5">
+          <div className="pt-3 mt-2 border-t border-hyatt-border flex flex-col gap-2.5">
             <a
               href={reservaUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="w-full py-3.5 rounded-sm bg-zinc-950 text-white font-bold text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2 shadow-md"
+              className="w-full py-3.5 rounded-sm bg-hyatt-burgundy text-white font-bold text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2 shadow-md"
             >
               <Sparkles className="w-4 h-4 shrink-0" />
               <span>Reservar Prueba por WhatsApp</span>
@@ -177,9 +177,9 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="w-full py-3 rounded-sm border border-zinc-300 text-zinc-900 text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2 font-medium"
+              className="w-full py-3 rounded-sm border border-hyatt-border bg-white text-hyatt-charcoal text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2 font-medium"
             >
-              <Instagram className="w-4 h-4 text-black shrink-0" />
+              <Instagram className="w-4 h-4 text-hyatt-burgundy shrink-0" />
               <span>Instagram {BUSINESS_INFO.instagramHandle}</span>
             </a>
           </div>

@@ -9,23 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        hyatt: {
+          white: "#FFFFFF",
+          ivory: "#FAF8F5",
+          cream: "#F5F2EB",
+          sand: "#EAE4D7",
+          border: "#E0D8CA",
+          taupe: "#9C7A54",
+          bronze: "#8A6A46",
+          burgundy: "#6A1B29",
+          wine: "#822032",
+          charcoal: "#1C1C1C",
+          ink: "#282828",
+          muted: "#5C5852",
+        },
         gold: {
           50: "#fbf8f1",
           100: "#f5eedc",
           200: "#eadab8",
           300: "#dec08d",
-          400: "#d4af37",
-          500: "#c59b27",
-          600: "#a87d1e",
-          700: "#865f1b",
-          800: "#704d1d",
-          900: "#5f401c",
-        },
-        obsidian: {
-          900: "#0a0a0c",
-          800: "#111115",
-          700: "#18181e",
-          600: "#22222a",
+          400: "#c59b6d",
+          500: "#9c7a54",
+          600: "#865f1b",
+          700: "#704d1d",
+          800: "#5f401c",
+          900: "#4a3115",
         },
       },
       fontFamily: {

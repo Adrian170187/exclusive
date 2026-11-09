@@ -77,18 +77,18 @@ export default function ComoFuncionaPage() {
   );
 
   return (
-    <div className="bg-white text-zinc-900 min-h-screen py-8 sm:py-14">
+    <div className="bg-hyatt-ivory text-hyatt-charcoal min-h-screen py-8 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-20">
         {/* Header */}
-        <div className="border-b border-zinc-200 pb-6 sm:pb-10">
-          <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-zinc-500 font-semibold flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-zinc-950 shrink-0" />
+        <div className="border-b border-hyatt-border pb-6 sm:pb-10">
+          <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-hyatt-burgundy shrink-0" />
             <span>Experiencia Simple & Sin Complicaciones</span>
           </span>
-          <h1 className="font-serif text-3xl sm:text-5xl text-zinc-950 font-semibold mt-2">
+          <h1 className="font-serif text-3xl sm:text-5xl text-hyatt-charcoal font-semibold mt-2">
             ¿Cómo Funciona el Alquiler en Exclusive?
           </h1>
-          <p className="text-xs sm:text-base text-zinc-600 max-w-3xl mt-2.5 sm:mt-3 leading-relaxed">
+          <p className="text-xs sm:text-base text-hyatt-muted max-w-3xl mt-2.5 sm:mt-3 leading-relaxed">
             Nos ocupamos de cada detalle —desde la elección del corte y los
             ajustes de sastrería hasta el planchado a vapor y la tintorería
             final— para que tu única preocupación sea disfrutar de tu evento.
@@ -100,24 +100,24 @@ export default function ComoFuncionaPage() {
           {RENTAL_STEPS.map((st) => (
             <div
               key={st.step}
-              className="p-5 sm:p-8 bg-zinc-50 border border-zinc-200 hover:border-zinc-900 rounded-sm transition-all flex flex-col justify-between"
+              className="p-5 sm:p-8 bg-white border border-hyatt-border hover:border-hyatt-taupe rounded-sm transition-all flex flex-col justify-between shadow-sm"
             >
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
-                  <span className="font-serif text-3xl sm:text-5xl font-bold text-zinc-950">
+                  <span className="font-serif text-3xl sm:text-5xl font-bold text-hyatt-burgundy">
                     Paso {st.step}
                   </span>
-                  <span className="px-2.5 py-1 rounded-sm bg-white border border-zinc-300 text-zinc-900 text-[10px] sm:text-xs uppercase tracking-wider font-semibold">
+                  <span className="px-2.5 py-1 rounded-sm bg-hyatt-cream border border-hyatt-border text-hyatt-charcoal text-[10px] sm:text-xs uppercase tracking-wider font-semibold">
                     {st.highlight}
                   </span>
                 </div>
-                <h2 className="font-serif text-2xl sm:text-3xl text-zinc-950 font-semibold">
+                <h2 className="font-serif text-2xl sm:text-3xl text-hyatt-charcoal font-semibold">
                   {st.title}
                 </h2>
-                <p className="text-xs uppercase tracking-[0.14em] text-zinc-500 font-semibold mt-1">
+                <p className="text-xs uppercase tracking-[0.14em] text-hyatt-taupe font-semibold mt-1">
                   {st.subtitle}
                 </p>
-                <p className="text-xs sm:text-sm text-zinc-600 mt-3 sm:mt-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-hyatt-muted mt-3 sm:mt-4 leading-relaxed">
                   {st.description}
                 </p>
               </div>
@@ -126,16 +126,16 @@ export default function ComoFuncionaPage() {
         </section>
 
         {/* INTERACTIVE DRESS CODE ADVISOR */}
-        <section className="bg-zinc-50 border border-zinc-300 rounded-sm p-5 sm:p-10">
+        <section className="bg-hyatt-cream border border-hyatt-border rounded-sm p-5 sm:p-10">
           <div className="max-w-3xl mb-6 sm:mb-8">
-            <span className="text-xs uppercase tracking-[0.18em] sm:tracking-[0.22em] text-zinc-600 font-semibold flex items-center gap-1.5">
-              <Shirt className="w-4 h-4 text-zinc-950 shrink-0" />
+            <span className="text-xs uppercase tracking-[0.18em] sm:tracking-[0.22em] text-hyatt-burgundy font-semibold flex items-center gap-1.5">
+              <Shirt className="w-4 h-4 text-hyatt-burgundy shrink-0" />
               <span>Asesor Sartorial Interactivo</span>
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl text-zinc-950 font-semibold mt-1">
+            <h2 className="font-serif text-2xl sm:text-4xl text-hyatt-charcoal font-semibold mt-1">
               ¿Qué Necesitás Alquilar Según tu Rol?
             </h2>
-            <p className="text-xs sm:text-sm text-zinc-600 mt-2">
+            <p className="text-xs sm:text-sm text-hyatt-muted mt-2">
               Seleccioná tu perfil para ver la recomendación de nuestros sastres
               y las piezas incluidas en el pack.
             </p>
@@ -152,8 +152,8 @@ export default function ComoFuncionaPage() {
                   onClick={() => setActiveRole(item)}
                   className={`py-3 px-2.5 sm:px-4 rounded-sm border text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-[0.14em] font-semibold transition-all text-center ${
                     isSelected
-                      ? "bg-zinc-950 text-white border-zinc-950 shadow-md"
-                      : "bg-white text-zinc-800 border-zinc-300 hover:border-zinc-950"
+                      ? "bg-hyatt-burgundy text-white border-hyatt-burgundy shadow-md"
+                      : "bg-white text-hyatt-charcoal border-hyatt-border hover:border-hyatt-taupe"
                   }`}
                 >
                   {item.role}
@@ -163,15 +163,15 @@ export default function ComoFuncionaPage() {
           </div>
 
           {/* Active Recommendation Card */}
-          <div className="bg-white border border-zinc-200 rounded-sm p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+          <div className="bg-white border border-hyatt-border rounded-sm p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center shadow-sm">
             <div className="lg:col-span-7 space-y-4">
-              <span className="text-xs uppercase tracking-[0.15em] text-zinc-500 font-semibold block">
+              <span className="text-xs uppercase tracking-[0.15em] text-hyatt-taupe font-semibold block">
                 Etiqueta Sugerida para {activeRole.role}
               </span>
-              <h3 className="font-serif text-xl sm:text-3xl text-zinc-950 font-semibold">
+              <h3 className="font-serif text-xl sm:text-3xl text-hyatt-charcoal font-semibold">
                 {activeRole.recommended}
               </h3>
-              <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed border-l-2 border-zinc-950 pl-3.5 sm:pl-4">
+              <p className="text-xs sm:text-sm text-hyatt-muted leading-relaxed border-l-2 border-hyatt-burgundy pl-3.5 sm:pl-4">
                 {activeRole.tip}
               </p>
               <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -179,14 +179,14 @@ export default function ComoFuncionaPage() {
                   href={advisorWhatsApp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-sm bg-zinc-950 hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-[0.14em] transition-all text-center"
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-sm bg-hyatt-burgundy hover:bg-hyatt-wine text-white font-bold text-xs uppercase tracking-[0.14em] transition-all text-center"
                 >
                   <MessageCircle className="w-4 h-4 shrink-0" />
                   <span>Cotizar este Pack por WhatsApp</span>
                 </a>
                 <Link
                   href="/catalogo"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm border border-zinc-300 hover:border-zinc-950 text-zinc-900 text-xs uppercase tracking-[0.14em] font-semibold transition-all text-center"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm border border-hyatt-border bg-hyatt-ivory hover:border-hyatt-charcoal text-hyatt-charcoal text-xs uppercase tracking-[0.14em] font-semibold transition-all text-center"
                 >
                   <span>Ver Modelos en Catálogo</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
@@ -194,17 +194,17 @@ export default function ComoFuncionaPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-zinc-50 p-5 sm:p-6 rounded-sm border border-zinc-200">
-              <h4 className="text-xs uppercase tracking-[0.14em] text-zinc-950 font-bold mb-3">
+            <div className="lg:col-span-5 bg-hyatt-cream p-5 sm:p-6 rounded-sm border border-hyatt-border">
+              <h4 className="text-xs uppercase tracking-[0.14em] text-hyatt-burgundy font-bold mb-3">
                 Piezas disponibles para tu pack:
               </h4>
               <ul className="space-y-2.5">
                 {activeRole.includes.map((inc) => (
                   <li
                     key={inc}
-                    className="flex items-start gap-2.5 text-xs text-zinc-700"
+                    className="flex items-start gap-2.5 text-xs text-hyatt-muted"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-zinc-950 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-hyatt-taupe shrink-0 mt-0.5" />
                     <span>{inc}</span>
                   </li>
                 ))}
@@ -215,15 +215,15 @@ export default function ComoFuncionaPage() {
 
         {/* GARANTIA SARTORIAL & TALLES */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8">
-          <div className="p-6 sm:p-8 bg-zinc-50 border border-zinc-200 rounded-sm space-y-3 sm:space-y-4">
-            <Scissors className="w-7 h-7 sm:w-8 sm:h-8 text-zinc-950" />
-            <h3 className="font-serif text-xl sm:text-2xl text-zinc-950 font-semibold">
+          <div className="p-6 sm:p-8 bg-white border border-hyatt-border rounded-sm space-y-3 sm:space-y-4 shadow-sm">
+            <Scissors className="w-7 h-7 sm:w-8 sm:h-8 text-hyatt-burgundy" />
+            <h3 className="font-serif text-xl sm:text-2xl text-hyatt-charcoal font-semibold">
               Taller de Ajustes Propio en el Local
             </h3>
-            <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-hyatt-muted leading-relaxed">
               Sabemos que cada cuerpo es único. Por eso, al momento de tu prueba
               en{" "}
-              <strong className="text-zinc-950">
+              <strong className="text-hyatt-charcoal">
                 Av. San Martín 1425 (Galería Bamac)
               </strong>
               , marcamos con alfileres el largo exacto de tus mangas y el ruedo
@@ -231,12 +231,12 @@ export default function ComoFuncionaPage() {
             </p>
           </div>
 
-          <div className="p-6 sm:p-8 bg-zinc-50 border border-zinc-200 rounded-sm space-y-3 sm:space-y-4">
-            <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 text-zinc-950" />
-            <h3 className="font-serif text-xl sm:text-2xl text-zinc-950 font-semibold">
+          <div className="p-6 sm:p-8 bg-white border border-hyatt-border rounded-sm space-y-3 sm:space-y-4 shadow-sm">
+            <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 text-hyatt-burgundy" />
+            <h3 className="font-serif text-xl sm:text-2xl text-hyatt-charcoal font-semibold">
               Higiene Ozonizada & Planchado Industrial
             </h3>
-            <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-hyatt-muted leading-relaxed">
               Cada traje, camisa y par de zapatos pasa por un riguroso proceso
               de tintorería ecológica, desinfección y planchado a vapor vertical
               antes de entregarse en su funda porta-traje exclusiva.
@@ -247,10 +247,10 @@ export default function ComoFuncionaPage() {
         {/* FAQ ACCORDION */}
         <section className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-10">
-            <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-zinc-500 font-semibold">
+            <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold">
               Dudas Frecuentes
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl text-zinc-950 font-semibold mt-2">
+            <h2 className="font-serif text-2xl sm:text-4xl text-hyatt-charcoal font-semibold mt-2">
               Preguntas Frecuentes sobre el Alquiler
             </h2>
           </div>
@@ -261,24 +261,24 @@ export default function ComoFuncionaPage() {
               return (
                 <div
                   key={faq.question}
-                  className="bg-white border border-zinc-200 rounded-sm overflow-hidden"
+                  className="bg-white border border-hyatt-border rounded-sm overflow-hidden shadow-sm"
                 >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-3 hover:bg-zinc-50 transition-colors"
+                    className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-3 hover:bg-hyatt-cream/50 transition-colors"
                   >
-                    <span className="font-serif text-base sm:text-xl text-zinc-950 font-semibold leading-snug">
+                    <span className="font-serif text-base sm:text-xl text-hyatt-charcoal font-semibold leading-snug">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-zinc-950 shrink-0 transition-transform ${
+                      className={`w-5 h-5 text-hyatt-burgundy shrink-0 transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {isOpen && (
-                    <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-2 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-100 bg-zinc-50/50">
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-2 text-xs sm:text-sm text-hyatt-muted leading-relaxed border-t border-hyatt-border bg-hyatt-ivory">
                       {faq.answer}
                     </div>
                   )}
