@@ -77,23 +77,26 @@ export default function ComoFuncionaPage() {
   );
 
   return (
-    <div className="bg-hyatt-ivory text-hyatt-charcoal min-h-screen py-8 sm:py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-20">
-        {/* Header */}
-        <div className="border-b border-hyatt-border pb-6 sm:pb-10">
-          <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-hyatt-burgundy shrink-0" />
+    <div className="bg-white text-hyatt-charcoal min-h-screen pb-8 sm:pb-14">
+      {/* Header on Black Container */}
+      <div className="bg-[#0F0F0F] text-white border-b border-white/10 py-10 sm:py-14 mb-8 sm:mb-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C59B6D] font-semibold flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
             <span>Experiencia Simple & Sin Complicaciones</span>
           </span>
-          <h1 className="font-serif text-3xl sm:text-5xl text-hyatt-charcoal font-semibold mt-2">
+          <h1 className="font-serif text-3xl sm:text-5xl text-white font-semibold mt-2">
             ¿Cómo Funciona el Alquiler en Exclusive?
           </h1>
-          <p className="text-xs sm:text-base text-hyatt-muted max-w-3xl mt-2.5 sm:mt-3 leading-relaxed">
+          <p className="text-xs sm:text-base text-white/75 max-w-3xl mt-2.5 sm:mt-3 leading-relaxed">
             Nos ocupamos de cada detalle —desde la elección del corte y los
             ajustes de sastrería hasta el planchado a vapor y la tintorería
             final— para que tu única preocupación sea disfrutar de tu evento.
           </p>
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-20">
 
         {/* 4 STEPS TIMELINE */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">

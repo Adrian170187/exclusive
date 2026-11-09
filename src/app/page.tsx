@@ -42,32 +42,61 @@ export default function HomePage() {
   );
 
   return (
-    <div className="bg-hyatt-ivory text-hyatt-charcoal">
-      {/* HERO SECTION - Park Hyatt Mendoza Editorial Warm Ivory & White */}
-      <section className="relative flex items-center overflow-hidden border-b border-hyatt-border bg-white">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Hero Copy */}
-            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
-              {/* Official Original Black-on-White Logo */}
-              <BrandLogo variant="hero" className="mb-1" />
+    <div className="bg-white text-hyatt-charcoal">
+      {/* 1. IMAGEN DE GALA EN EL PRINCIPIO (Estilo Park Hyatt Mendoza Weddings) */}
+      <section className="relative w-full h-[46vh] sm:h-[62vh] lg:h-[74vh] bg-[#0F0F0F] overflow-hidden">
+        <img
+          src={`${BASE_PATH}/catalogo/gala-hyatt-mendoza.jpg`}
+          alt="Gala de etiqueta masculina en Mendoza - Exclusive Alquiler de Trajes"
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Gradiente sutil superior e inferior para fundirse con el Navbar negro y el Container negro siguiente */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-[#0F0F0F]" />
 
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 rounded-sm bg-hyatt-cream border border-hyatt-border text-hyatt-burgundy text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] font-semibold">
-                <Sparkles className="w-3.5 h-3.5 text-hyatt-taupe shrink-0" />
+        {/* Etiqueta editorial estilo Park Hyatt sobre la imagen de gala */}
+        <div className="absolute bottom-5 sm:bottom-8 left-0 right-0 z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-black/70 backdrop-blur-md border border-[#C59B6D]/40 text-[#C59B6D] text-[10px] sm:text-xs uppercase tracking-[0.22em] font-semibold">
+                <Sparkles className="w-3.5 h-3.5 shrink-0" />
+                <span>Bodas, Galas & Eventos de Etiqueta en Mendoza</span>
+              </span>
+              <p className="font-serif text-xl sm:text-3xl text-white font-medium mt-2 drop-shadow-md">
+                Sastrería Masculina de Gala & Ceremonia
+              </p>
+            </div>
+            <p className="hidden md:block text-xs uppercase tracking-[0.2em] text-white/80 font-medium">
+              Av. San Martín 1425 · Ciudad de Mendoza
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. CONTAINER SIGUIENTE EN COLOR NEGRO CON LOGO BLANCO EN CONTRASTE */}
+      <section className="relative bg-[#0F0F0F] text-white border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Presentación Principal sobre Fondo Negro */}
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+              {/* Logo en blanco para contraste sobre el contenedor negro */}
+              <BrandLogo variant="hero" theme="dark" className="mb-1" />
+
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 rounded-sm bg-white/5 border border-[#C59B6D]/40 text-[#C59B6D] text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] font-semibold">
+                <Sparkles className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
                 <span>Alta Sastrería & Alquiler Masculino en Mendoza</span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-hyatt-charcoal font-semibold leading-[1.12] sm:leading-[1.08] tracking-tight">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-semibold leading-[1.12] sm:leading-[1.08] tracking-tight">
                 La Distinción de un{" "}
-                <span className="italic text-hyatt-burgundy underline decoration-hyatt-taupe/50 underline-offset-8">
+                <span className="italic text-[#C59B6D] underline decoration-[#C59B6D]/40 underline-offset-8">
                   Calce Perfecto
                 </span>{" "}
                 en tu Gran Noche.
               </h1>
 
-              <p className="text-sm sm:text-lg text-hyatt-muted max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-lg text-white/75 max-w-2xl leading-relaxed">
                 Especialistas en alquiler de{" "}
-                <strong className="text-hyatt-charcoal font-semibold">
+                <strong className="text-white font-semibold">
                   trajes Slim Fit, ambos tres piezas, esmóquines (smoking), frac
                   y jaqué de ceremonia para hombres
                 </strong>
@@ -76,26 +105,26 @@ export default function HomePage() {
               </p>
 
               {/* Key Pills */}
-              <div className="grid grid-cols-1 sm:flex sm:flex-wrap gap-2 sm:gap-3 pt-1 text-xs text-hyatt-charcoal">
-                <span className="flex items-center gap-2 bg-hyatt-ivory border border-hyatt-border px-3 py-2 sm:py-1.5 rounded-sm font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-hyatt-burgundy shrink-0" />
+              <div className="grid grid-cols-1 sm:flex sm:flex-wrap gap-2 sm:gap-3 pt-1 text-xs text-white/90">
+                <span className="flex items-center gap-2 bg-white/5 border border-white/15 px-3 py-2 sm:py-1.5 rounded-sm font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
                   <span>Novios, Padrinos, Egresados & Invitados</span>
                 </span>
-                <span className="flex items-center gap-2 bg-hyatt-ivory border border-hyatt-border px-3 py-2 sm:py-1.5 rounded-sm font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-hyatt-burgundy shrink-0" />
+                <span className="flex items-center gap-2 bg-white/5 border border-white/15 px-3 py-2 sm:py-1.5 rounded-sm font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
                   <span>Smoking, Frac & Jaqué de Etiqueta</span>
                 </span>
-                <span className="flex items-center gap-2 bg-hyatt-ivory border border-hyatt-border px-3 py-2 sm:py-1.5 rounded-sm font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-hyatt-burgundy shrink-0" />
+                <span className="flex items-center gap-2 bg-white/5 border border-white/15 px-3 py-2 sm:py-1.5 rounded-sm font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
                   <span>Camisas, Chalecos, Moños & Zapatos</span>
                 </span>
               </div>
 
-              {/* CTA Buttons - Park Hyatt Burgundy & Warm Ivory */}
+              {/* CTA Buttons */}
               <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <Link
                   href="/catalogo"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-sm bg-hyatt-burgundy hover:bg-hyatt-wine text-white font-bold text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] shadow-lg transition-all text-center"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-sm bg-hyatt-burgundy hover:bg-hyatt-wine text-white font-bold text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] shadow-lg transition-all text-center border border-white/10"
                 >
                   <span>Explorar Catálogo</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
@@ -105,27 +134,27 @@ export default function HomePage() {
                   href={heroWhatsApp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-4 rounded-sm bg-hyatt-cream hover:bg-hyatt-sand text-hyatt-charcoal border border-hyatt-taupe font-semibold text-xs uppercase tracking-[0.14em] sm:tracking-[0.18em] transition-all text-center"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-4 rounded-sm bg-white/5 hover:bg-white hover:text-black text-white border border-[#C59B6D]/60 font-semibold text-xs uppercase tracking-[0.14em] sm:tracking-[0.18em] transition-all text-center"
                 >
-                  <CalendarCheck className="w-4 h-4 text-hyatt-burgundy shrink-0" />
+                  <CalendarCheck className="w-4 h-4 text-[#C59B6D] shrink-0" />
                   <span>Agendar Prueba en el Local</span>
                 </a>
               </div>
 
               {/* Location Mini-bar */}
-              <div className="pt-4 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2.5 sm:gap-6 text-xs text-hyatt-muted border-t border-hyatt-border">
+              <div className="pt-4 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2.5 sm:gap-6 text-xs text-white/70 border-t border-white/15">
                 <div className="flex items-start sm:items-center gap-2">
-                  <MapPin className="w-4 h-4 text-hyatt-burgundy shrink-0 mt-0.5 sm:mt-0" />
+                  <MapPin className="w-4 h-4 text-[#C59B6D] shrink-0 mt-0.5 sm:mt-0" />
                   <span>
-                    <strong className="text-hyatt-charcoal">Showroom:</strong>{" "}
-                    Av. San Martín 1425 (Galería Bamac), Mendoza
+                    <strong className="text-white">Showroom:</strong> Av. San
+                    Martín 1425 (Galería Bamac), Mendoza
                   </span>
                 </div>
                 <a
                   href={BUSINESS_INFO.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-hyatt-burgundy font-semibold hover:underline"
+                  className="inline-flex items-center gap-1.5 text-[#C59B6D] font-semibold hover:underline"
                 >
                   <Instagram className="w-4 h-4 shrink-0" />
                   <span>{BUSINESS_INFO.instagramHandle}</span>
@@ -136,22 +165,22 @@ export default function HomePage() {
             {/* Hero Editorial Showcase Card */}
             <div className="lg:col-span-5">
               <div className="relative mx-auto max-w-md">
-                <div className="hidden sm:block absolute -inset-3 border border-hyatt-taupe/50 rounded-sm translate-x-3 translate-y-3 pointer-events-none" />
-                <div className="relative aspect-[16/11] sm:aspect-[4/5] rounded-sm overflow-hidden border border-hyatt-border shadow-2xl bg-hyatt-cream">
+                <div className="hidden sm:block absolute -inset-3 border border-[#C59B6D]/40 rounded-sm translate-x-3 translate-y-3 pointer-events-none" />
+                <div className="relative aspect-[16/11] sm:aspect-[4/5] rounded-sm overflow-hidden border border-white/15 shadow-2xl bg-[#1A1A1A]">
                   <img
                     src={`${BASE_PATH}/catalogo/smoking-imperial-noir.jpg`}
                     alt="Smoking de etiqueta masculino Exclusive Mendoza"
                     className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-5 bg-hyatt-ivory/95 backdrop-blur-md border border-hyatt-border rounded-sm shadow-lg">
-                    <p className="text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.24em] text-hyatt-burgundy font-bold">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-5 bg-[#141414]/95 backdrop-blur-md border border-white/15 rounded-sm shadow-lg">
+                    <p className="text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.24em] text-[#C59B6D] font-bold">
                       Temporada Bodas & Egresados
                     </p>
-                    <p className="font-serif text-lg sm:text-xl text-hyatt-charcoal font-semibold mt-0.5 sm:mt-1">
+                    <p className="font-serif text-lg sm:text-xl text-white font-semibold mt-0.5 sm:mt-1">
                       Packs Todo Incluido listos para vestir
                     </p>
-                    <p className="text-[11px] sm:text-xs text-hyatt-muted mt-1">
+                    <p className="text-[11px] sm:text-xs text-white/70 mt-1">
                       Saco + Pantalón + Camisa + Chaleco/Faja + Moño o Corbata +
                       Ajustes a tu medida.
                     </p>
@@ -161,17 +190,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Stats Strip - Park Hyatt Cream Cards */}
-          <div className="mt-10 sm:mt-16 pt-8 sm:pt-10 border-t border-hyatt-border grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          {/* Stats Strip inside the Black Container */}
+          <div className="mt-10 sm:mt-16 pt-8 sm:pt-10 border-t border-white/15 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {BUSINESS_INFO.stats.map((st) => (
               <div
                 key={st.label}
-                className="bg-hyatt-cream border border-hyatt-border p-3.5 sm:p-5 rounded-sm text-center flex flex-col justify-center"
+                className="bg-white/[0.04] border border-white/10 p-3.5 sm:p-5 rounded-sm text-center flex flex-col justify-center"
               >
-                <p className="font-serif text-2xl sm:text-4xl text-hyatt-burgundy font-bold">
+                <p className="font-serif text-2xl sm:text-4xl text-[#C59B6D] font-bold">
                   {st.value}
                 </p>
-                <p className="text-[10px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.15em] text-hyatt-muted mt-1 leading-snug font-medium">
+                <p className="text-[10px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.15em] text-white/75 mt-1 leading-snug font-medium">
                   {st.label}
                 </p>
               </div>
@@ -180,8 +209,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 3. RESTO DEL FONDO EN COLOR BLANCO PURO (#FFFFFF) */}
       {/* LAS 3 LINEAS PRINCIPALES */}
-      <section className="py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-hyatt-ivory">
+      <section className="py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold">
             Nuestras Líneas de Alquiler Masculino
@@ -197,8 +227,8 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {/* Card 1: Trajes y Ambos */}
-          <div className="group relative rounded-sm overflow-hidden bg-white border border-hyatt-border hover:border-hyatt-taupe shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
-            <div className="relative h-60 sm:h-72 overflow-hidden bg-hyatt-cream">
+          <div className="group relative rounded-sm overflow-hidden bg-white border border-neutral-200 hover:border-hyatt-taupe shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+            <div className="relative h-60 sm:h-72 overflow-hidden bg-neutral-100">
               <img
                 src={`${BASE_PATH}/catalogo/ambo-milano-azul-noche.jpg`}
                 alt="Alquiler de Trajes y Ambos para Hombres en Mendoza"
@@ -220,7 +250,7 @@ export default function HomePage() {
                   bodas de día o de noche. Opciones de 2 y 3 piezas con chaleco.
                 </p>
               </div>
-              <div className="mt-5 sm:mt-6 pt-4 border-t border-hyatt-border">
+              <div className="mt-5 sm:mt-6 pt-4 border-t border-neutral-200">
                 <Link
                   href="/catalogo?categoria=ambos"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-hyatt-burgundy font-bold group-hover:underline"
@@ -233,8 +263,8 @@ export default function HomePage() {
           </div>
 
           {/* Card 2: Smoking, Frac y Jaqué */}
-          <div className="group relative rounded-sm overflow-hidden bg-white border border-hyatt-border hover:border-hyatt-taupe shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
-            <div className="relative h-60 sm:h-72 overflow-hidden bg-hyatt-cream">
+          <div className="group relative rounded-sm overflow-hidden bg-white border border-neutral-200 hover:border-hyatt-taupe shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+            <div className="relative h-60 sm:h-72 overflow-hidden bg-neutral-100">
               <img
                 src={`${BASE_PATH}/catalogo/smoking-azul-medianoche.jpg`}
                 alt="Alquiler de Smoking, Frac y Jaqué para Hombres en Mendoza"
@@ -257,7 +287,7 @@ export default function HomePage() {
                   ceremonia y <strong>Frac White Tie</strong> de gala.
                 </p>
               </div>
-              <div className="mt-5 sm:mt-6 pt-4 border-t border-hyatt-border">
+              <div className="mt-5 sm:mt-6 pt-4 border-t border-neutral-200">
                 <Link
                   href="/catalogo?categoria=esmoquin"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-hyatt-burgundy font-bold group-hover:underline"
@@ -270,8 +300,8 @@ export default function HomePage() {
           </div>
 
           {/* Card 3: Accesorios y Calzado */}
-          <div className="group relative rounded-sm overflow-hidden bg-white border border-hyatt-border hover:border-hyatt-taupe shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
-            <div className="relative h-60 sm:h-72 overflow-hidden bg-hyatt-cream">
+          <div className="group relative rounded-sm overflow-hidden bg-white border border-neutral-200 hover:border-hyatt-taupe shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+            <div className="relative h-60 sm:h-72 overflow-hidden bg-neutral-100">
               <img
                 src={`${BASE_PATH}/catalogo/calzado-oxford-charol-cuero.jpg`}
                 alt="Accesorios de etiqueta y calzado formal masculino en Mendoza"
@@ -296,7 +326,7 @@ export default function HomePage() {
                   de cuero o charol (talles 38 al 46).
                 </p>
               </div>
-              <div className="mt-5 sm:mt-6 pt-4 border-t border-hyatt-border">
+              <div className="mt-5 sm:mt-6 pt-4 border-t border-neutral-200">
                 <Link
                   href="/catalogo?categoria=accesorios"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-hyatt-burgundy font-bold group-hover:underline"
@@ -310,8 +340,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* DESTACADOS DEL CATALOGO - Park Hyatt Warm Cream Surface */}
-      <section className="py-14 sm:py-20 bg-hyatt-cream border-y border-hyatt-border">
+      {/* DESTACADOS DEL CATALOGO - Fondo Blanco */}
+      <section className="py-14 sm:py-20 bg-white border-t border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div>
@@ -343,8 +373,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* DIFERENCIALES / POR QUE ELEGIR EXCLUSIVE */}
-      <section className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-hyatt-ivory">
+      {/* DIFERENCIALES / POR QUE ELEGIR EXCLUSIVE - Fondo Blanco */}
+      <section className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white border-t border-neutral-200">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           <div className="lg:col-span-5 space-y-4 sm:space-y-5">
             <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold">
@@ -370,7 +400,7 @@ export default function HomePage() {
           </div>
 
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-            <div className="p-5 sm:p-6 bg-white border border-hyatt-border rounded-sm shadow-sm">
+            <div className="p-5 sm:p-6 bg-white border border-neutral-200 rounded-sm shadow-sm">
               <Scissors className="w-6 h-6 sm:w-7 sm:h-7 text-hyatt-burgundy mb-3" />
               <h3 className="font-serif text-xl text-hyatt-charcoal font-semibold">
                 Ajuste Sartorial Incluido
@@ -381,7 +411,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="p-5 sm:p-6 bg-white border border-hyatt-border rounded-sm shadow-sm">
+            <div className="p-5 sm:p-6 bg-white border border-neutral-200 rounded-sm shadow-sm">
               <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-hyatt-burgundy mb-3" />
               <h3 className="font-serif text-xl text-hyatt-charcoal font-semibold">
                 Tintorería 100% Bonificada
@@ -392,7 +422,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="p-5 sm:p-6 bg-white border border-hyatt-border rounded-sm shadow-sm">
+            <div className="p-5 sm:p-6 bg-white border border-neutral-200 rounded-sm shadow-sm">
               <Award className="w-6 h-6 sm:w-7 sm:h-7 text-hyatt-burgundy mb-3" />
               <h3 className="font-serif text-xl text-hyatt-charcoal font-semibold">
                 Curva Completa de Talles
@@ -403,7 +433,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="p-5 sm:p-6 bg-white border border-hyatt-border rounded-sm shadow-sm">
+            <div className="p-5 sm:p-6 bg-white border border-neutral-200 rounded-sm shadow-sm">
               <Clock className="w-6 h-6 sm:w-7 sm:h-7 text-hyatt-burgundy mb-3" />
               <h3 className="font-serif text-xl text-hyatt-charcoal font-semibold">
                 Urgencias & Último Momento
@@ -417,8 +447,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* COMO FUNCIONA PREVIEW */}
-      <section className="py-14 sm:py-20 bg-hyatt-cream border-t border-hyatt-border">
+      {/* COMO FUNCIONA PREVIEW - Fondo Blanco */}
+      <section className="py-14 sm:py-20 bg-white border-t border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold">
@@ -433,14 +463,14 @@ export default function HomePage() {
             {RENTAL_STEPS.map((st) => (
               <div
                 key={st.step}
-                className="relative p-5 sm:p-6 bg-white border border-hyatt-border rounded-sm flex flex-col justify-between shadow-sm"
+                className="relative p-5 sm:p-6 bg-white border border-neutral-200 rounded-sm flex flex-col justify-between shadow-sm"
               >
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                     <span className="font-serif text-3xl sm:text-4xl font-bold text-hyatt-burgundy">
                       {st.step}
                     </span>
-                    <span className="text-[10px] uppercase tracking-wider px-2.5 py-1 bg-hyatt-cream text-hyatt-charcoal border border-hyatt-border rounded-sm font-semibold">
+                    <span className="text-[10px] uppercase tracking-wider px-2.5 py-1 bg-neutral-100 text-hyatt-charcoal border border-neutral-200 rounded-sm font-semibold">
                       {st.highlight}
                     </span>
                   </div>
@@ -460,8 +490,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIOS DE CLIENTES EN MENDOZA */}
-      <section className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-hyatt-ivory">
+      {/* TESTIMONIOS DE CLIENTES EN MENDOZA - Fondo Blanco */}
+      <section className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white border-t border-neutral-200">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold">
             Clientes Reales en Mendoza
@@ -475,7 +505,7 @@ export default function HomePage() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="p-5 sm:p-6 bg-white border border-hyatt-border rounded-sm flex flex-col justify-between shadow-sm"
+              className="p-5 sm:p-6 bg-white border border-neutral-200 rounded-sm flex flex-col justify-between shadow-sm"
             >
               <div>
                 <div className="flex items-center gap-1 text-hyatt-taupe mb-3 sm:mb-4">
@@ -490,7 +520,7 @@ export default function HomePage() {
                   &ldquo;{t.text}&rdquo;
                 </p>
               </div>
-              <div className="mt-5 sm:mt-6 pt-4 border-t border-hyatt-border">
+              <div className="mt-5 sm:mt-6 pt-4 border-t border-neutral-200">
                 <p className="text-sm font-semibold text-hyatt-charcoal">
                   {t.name}
                 </p>
@@ -503,8 +533,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA FINAL + INSTAGRAM BANNER */}
-      <section className="py-12 sm:py-16 bg-hyatt-sand/60 border-t border-hyatt-border">
+      {/* CTA FINAL + INSTAGRAM BANNER - Fondo Blanco */}
+      <section className="py-12 sm:py-16 bg-white border-t border-neutral-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 sm:space-y-6">
           <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] sm:tracking-[0.24em] text-hyatt-burgundy font-semibold">
             <Instagram className="w-4 h-4 shrink-0" />
@@ -531,7 +561,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/contacto"
-              className="w-full sm:w-auto px-6 sm:px-8 py-4 rounded-sm bg-white border border-hyatt-charcoal hover:bg-hyatt-cream text-hyatt-charcoal text-xs uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold transition-all text-center"
+              className="w-full sm:w-auto px-6 sm:px-8 py-4 rounded-sm bg-white border border-hyatt-charcoal hover:bg-neutral-100 text-hyatt-charcoal text-xs uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold transition-all text-center"
             >
               Ver Mapa y Horarios
             </Link>

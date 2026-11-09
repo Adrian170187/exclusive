@@ -21,19 +21,19 @@ export default function GaleriaPage() {
   >(null);
 
   return (
-    <div className="bg-hyatt-ivory text-hyatt-charcoal min-h-screen py-8 sm:py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-hyatt-border pb-6 sm:pb-10 mb-8 sm:mb-12 gap-4 sm:gap-6">
+    <div className="bg-white text-hyatt-charcoal min-h-screen pb-8 sm:pb-14">
+      {/* Header on Black Container */}
+      <div className="bg-[#0F0F0F] text-white border-b border-white/10 py-10 sm:py-14 mb-8 sm:mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
           <div>
-            <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-hyatt-taupe font-semibold flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-hyatt-burgundy shrink-0" />
+            <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C59B6D] font-semibold flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#C59B6D] shrink-0" />
               <span>Inspiración & Estilo Real</span>
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl text-hyatt-charcoal font-semibold mt-2">
+            <h1 className="font-serif text-3xl sm:text-5xl text-white font-semibold mt-2">
               Galería & Lookbook Exclusive
             </h1>
-            <p className="text-xs sm:text-base text-hyatt-muted max-w-2xl mt-2.5 sm:mt-3 leading-relaxed">
+            <p className="text-xs sm:text-base text-white/75 max-w-2xl mt-2.5 sm:mt-3 leading-relaxed">
               Conocé cómo lucen nuestros ambos Slim Fit, esmóquines, jaqués y
               accesorios en bodas en bodegas, cenas de egresados y eventos de
               gala en Mendoza.
@@ -44,13 +44,16 @@ export default function GaleriaPage() {
             href={BUSINESS_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm bg-hyatt-burgundy hover:bg-hyatt-wine text-white text-xs uppercase tracking-[0.14em] font-semibold transition-all shadow-sm"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm bg-hyatt-burgundy hover:bg-hyatt-wine text-white text-xs uppercase tracking-[0.14em] font-semibold transition-all shadow-sm border border-white/15"
           >
             <Instagram className="w-4 h-4 shrink-0" />
             <span>Ver más en {BUSINESS_INFO.instagramHandle}</span>
             <ExternalLink className="w-3.5 h-3.5 shrink-0" />
           </a>
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Lookbook Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 auto-rows-[270px] sm:auto-rows-[320px]">
